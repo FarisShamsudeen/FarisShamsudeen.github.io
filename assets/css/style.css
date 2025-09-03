@@ -3,13 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -135,7 +128,7 @@ button {
   font: inherit;
   background: none;
   border: none;
-  text-align: left;
+  text-align: left
   cursor: pointer;
 }
 
@@ -155,9 +148,16 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body {
+  background: #0E8B67;
+  background: radial-gradient(at center top, #0E8B67, #031F1C);
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
 
-
+body::-webkit-scrollbar {
+  display: none;
+}
 
 
 
@@ -167,12 +167,18 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
+  /* background: var(--eerie-black-2); */
+  /* border: 1px solid var(--jet); */
   border-radius: 20px;
   padding: 15px;
-  box-shadow: var(--shadow-1);
+  /* box-shadow: var(--shadow-1); */
   z-index: 1;
+  background: rgba(255, 255, 255, 0.2);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .separator {
@@ -334,7 +340,19 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* -webkit-mask-image: url(./images/socialDP.png); */
+  /* mask-image: url(./images/socialDP.png); */
 }
+
+#main-dp {
+  border-radius: 25%;
+  padding: 4px 4px;
+  
+}
+
+
 
 .info-content .name {
   color: var(--white-2);
