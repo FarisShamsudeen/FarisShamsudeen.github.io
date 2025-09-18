@@ -1,4 +1,66 @@
 /*-----------------------------------*\
+  #PRELOADER
+\*-----------------------------------*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--onyx);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-2);
+}
+
+.preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-circle {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--white-1);
+  border-top-color: var(--onyx);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*-----------------------------------*\
+  #CUSTOM SCROLLBAR
+\*-----------------------------------*/
+
+/* ::-webkit-scrollbar { */
+/*   width: 10px; */
+/* } */
+/**/
+/* ::-webkit-scrollbar-track { */
+/*   background: var(--smoky-black); */
+/* } */
+/**/
+/* ::-webkit-scrollbar-thumb { */
+/*   background: var(--vegas-gold); */
+/*   border-radius: 10px; */
+/* } */
+/**/
+/* ::-webkit-scrollbar-thumb:hover { */
+/*   background: hsl(45, 54%, 68%); */
+/* } */
+
+/*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
 
@@ -18,8 +80,8 @@
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(246, 38%, 27%) 3%,
+    hsl(240, 28%, 19%) 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
@@ -49,8 +111,8 @@
 
   /* solid */
 
-  --jet: rgba(135, 206, 235, 0.5);
-  --onyx: #23233E;
+  --jet: #3a3a3a;
+  --onyx: hsl(240, 28%, 19%);
   --eerie-black-1: rgba(255, 255, 255, 0.1);
   --eerie-black-2: rgba(255, 255, 255, 0.2);
   /* --eerie-black-2: hsl(240, 2%, 12%); */
@@ -129,7 +191,7 @@ button {
   font: inherit;
   background: none;
   border: none;
-  text-align: left
+  text-align: left;
   cursor: pointer;
 }
 
@@ -150,10 +212,9 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body {
-background: #0f0c29;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  scrollbar-width: none;  
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 body::-webkit-scrollbar {
@@ -187,7 +248,7 @@ article {
 
 .icon-box {
   position: relative;
-  background: var(--onyx);
+  background: var(--bg-gradient-onyx);
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -204,7 +265,7 @@ article {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--onyx);
+  background: var(--bg-gradient-onyx);
   border-radius: inherit;
   z-index: -1;
 }
@@ -214,7 +275,10 @@ ion-icon {
   color: skyblue;
 }
 
-article { display: none; }
+article {
+  display: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
 
 article.active {
   display: block;
@@ -267,7 +331,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
-  background: var(--onyx);
+  background: var(--bg-gradient-onyx);
   border-radius: 5px;
 }
 
@@ -332,7 +396,7 @@ main {
 }
 
 .avatar-box {
-  background: rgba(255, 255, 255, 0.00);
+  background: var(--bg-gradient-onyx);
   border-radius: 16px;
   border: skyblue solid 2px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -603,7 +667,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-  display: -webkit-box;
+  /* display: -webkit-box; */
   line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -1192,6 +1256,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: var(--shadow-3);
   z-index: 1;
   transition: var(--transition-1);
+  text-align: center;
 }
 
 .form-btn::before {
@@ -1553,7 +1618,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 700px; }
+  .sidebar, article {
+    width: 700px;
+  }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 

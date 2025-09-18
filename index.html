@@ -27,6 +27,15 @@
 
 <body>
 
+
+  <!--
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="preloader-circle"></div>
+  </div>
+
   <!--
     - #MAIN
   -->
@@ -175,23 +184,38 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link>
+              <!-- <ion-icon name="person-outline"></ion-icon> -->
+              <span>About</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link>
+              <!-- <ion-icon name="document-text-outline"></ion-icon> -->
+              <span>Resume</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>
+              <!-- <ion-icon name="briefcase-outline"></ion-icon> -->
+              <span>Portfolio</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link>
+              <!-- <ion-icon name="newspaper-outline"></ion-icon> -->
+              <span>Blog</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link>
+              <!-- <ion-icon name="mail-outline"></ion-icon> -->
+              <span>Contact</span>
+            </button>
           </li>
 
         </ul>
@@ -231,27 +255,26 @@
 
 
         <!--
-          - service
+          - What I'm Doing
         -->
 
         <section class="service">
 
-          <h3 class="h3 service-title">What I Offer</h3>
+          <h3 class="h3 service-title">What I'm Doing</h3>
 
           <ul class="service-list">
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="layers"></ion-icon>
+                <ion-icon name="code-working-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Foundation</h4>
+                <h4 class="h4 service-item-title">Web Development</h4>
 
                 <p class="service-item-text">
-                  End-to-end development of web applications using the MERN stack, from backend APIs to clean,
-                  interactive UIs.
+                  Building and deploying full-stack web applications using the MERN stack.
                 </p>
               </div>
 
@@ -260,14 +283,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="git-network"></ion-icon>
+                <ion-icon name="book-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Connectivity</h4>
+                <h4 class="h4 service-item-title">Learning</h4>
 
                 <p class="service-item-text">
-                  Practical, minimal design sensibilities that ensure your message and values shine through.
+                  Continuously learning new technologies and improving my skills.
                 </p>
               </div>
 
@@ -276,15 +299,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="sparkles"></ion-icon>
+                <ion-icon name="people-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Experience</h4>
+                <h4 class="h4 service-item-title">Collaboration</h4>
 
                 <p class="service-item-text">
-                  Strong emphasis on collaboration, code quality, and delivering solutions that are easy to maintain and
-                  scale.
+                  Actively seeking opportunities to collaborate on open-source projects.
                 </p>
               </div>
 
@@ -293,15 +315,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="hand-left"></ion-icon>
+                <ion-icon name="share-social-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Interactivity</h4>
+                <h4 class="h4 service-item-title">Community</h4>
 
                 <p class="service-item-text">
-                  Experience contributing to real-world projects and continuously refining my craft to stay adaptable
-                  and future-ready.
+                  Sharing my knowledge and experience with the developer community.
                 </p>
               </div>
 
@@ -311,11 +332,155 @@
 
         </section>
 
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">What I Offer</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Foundation</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    End-to-end development of web applications using the MERN stack, from backend APIs to clean,
+                    interactive UIs.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Connectivity</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Practical, minimal design sensibilities that ensure your message and values shine through.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Experience</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Strong emphasis on collaboration, code quality, and delivering solutions that are easy to maintain
+                    and scale.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Interactivity</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Experience contributing to real-world projects and continuously refining my craft to stay adaptable
+                    and future-ready.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - Softwares I Use
+        -->
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">My Tools</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
       </article>
-
-
-
-
 
       <!--
         - #RESUME
@@ -341,41 +506,26 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <h4 class="h4 timeline-item-title">Brototype</h4>
 
-              <span>2007 — 2008</span>
+              <span>2024 — Present</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Currently enrolled in the MERN stack development program, gaining hands-on experience in building modern
+                web applications.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+              <h4 class="h4 timeline-item-title">Visvesvaraya Technological University</h4>
 
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
+              <span>2021 — 2025</span>
 
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
+                Pursuing a Bachelor of Engineering in Computer Science, building a strong foundation in computer science
+                fundamentals.
               </p>
 
             </li>
@@ -388,7 +538,7 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="briefcase-outline"></ion-icon>
             </div>
 
             <h3 class="h3">Experience</h3>
@@ -398,42 +548,41 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title">Freelance Web Developer</h4>
 
-              <span>2015 — Present</span>
+              <span>2023 — Present</span>
 
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                Working with clients to create and maintain websites, focusing on user-friendly design and
+                functionality.
               </p>
 
             </li>
 
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Certifications</h3>
+          </div>
+
+          <ol class="timeline-list">
+
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <h4 class="h4 timeline-item-title">MERN Stack Development</h4>
 
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
+              <span>2024</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Completed a comprehensive course on MERN stack development from Brototype.
               </p>
 
             </li>
@@ -451,33 +600,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
+                <h5 class="h5">MERN Stack</h5>
                 <data value="90">90%</data>
               </div>
 
@@ -490,12 +613,64 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
+                <h5 class="h5">JavaScript</h5>
+                <data value="95">95%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
+                <div class="skill-progress-fill" style="width: 95%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">React</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Node.js</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">MongoDB</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Express.js</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
               </div>
 
             </li>
@@ -579,7 +754,7 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="1">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -597,7 +772,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="2">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -615,7 +790,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="3">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -633,7 +808,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="4">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -651,7 +826,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="5">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -669,7 +844,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="6">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -687,7 +862,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="7">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -705,7 +880,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="8">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -723,7 +898,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" class="project-link" data-project-id="9">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -746,6 +921,46 @@
 
       </article>
 
+      <!--
+        - #MODAL
+      -->
+
+      <div class="modal-container" data-modal-container>
+        <div class="overlay" data-overlay></div>
+
+        <section class="modal-content">
+
+          <button class="modal-close-btn" data-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box">
+              <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+            </figure>
+
+            <img src="./assets/images/icon-quote.svg" alt="quote icon">
+          </div>
+
+          <div class="modal-body">
+            <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+            <time datetime="2021-06-14">14 June, 2021</time>
+
+            <div data-modal-text>
+              <p>
+                Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                lot of experience
+                and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                consectetur adipiscing
+                elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+              </p>
+            </div>
+          </div>
+
+        </section>
+      </div>
+
 
 
 
@@ -765,7 +980,7 @@
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" class="blog-post-link" data-blog-post-id="1">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
@@ -793,7 +1008,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" class="blog-post-link" data-blog-post-id="2">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
@@ -821,7 +1036,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" class="blog-post-link" data-blog-post-id="3">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
@@ -849,7 +1064,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" class="blog-post-link" data-blog-post-id="4">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
@@ -877,7 +1092,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" class="blog-post-link" data-blog-post-id="5">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
@@ -905,7 +1120,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" class="blog-post-link" data-blog-post-id="6">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
@@ -938,6 +1153,40 @@
 
       </article>
 
+      <!--
+        - #BLOG MODAL
+      -->
+
+      <div class="modal-container" data-blog-modal-container>
+        <div class="overlay" data-blog-overlay></div>
+
+        <section class="modal-content">
+
+          <button class="modal-close-btn" data-blog-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box">
+              <img src="./assets/images/blog-1.jpg" alt="Blog Post" width="80" data-blog-modal-img>
+            </figure>
+          </div>
+
+          <div class="modal-body">
+            <h4 class="h3 modal-title" data-blog-modal-title>Blog Post Title</h4>
+
+            <time datetime="2022-02-23" data-blog-modal-time>Fab 23, 2022</time>
+
+            <div data-blog-modal-text>
+              <p>
+                Blog post content goes here.
+              </p>
+            </div>
+          </div>
+
+        </section>
+      </div>
+
 
 
 
@@ -955,7 +1204,7 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d401661.9421338563!2d76.1369375439323!3d9.982099394929176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514ab289f5%3A0x82c34163a9d530a!2sKerala%2C%20India!5e0!3m2!1sen!2sus!4v1678195942971!5m2!1sen!2sus"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
@@ -971,6 +1220,8 @@
 
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
+
+            <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
@@ -988,6 +1239,7 @@
     </div>
 
   </main>
+
 
 
 
