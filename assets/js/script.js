@@ -23,52 +23,52 @@ document.addEventListener("DOMContentLoaded", function() {
     sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
   }
 
-  // // testimonials variables
-  // const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-  // const modalContainer = document.querySelector("[data-modal-container]");
-  // const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-  // const overlay = document.querySelector("[data-overlay]");
-  //
-  // // modal variable
-  // const modalImg = document.querySelector("[data-modal-img]");
-  // const modalTitle = document.querySelector("[data-modal-title]");
-  // const modalText = document.querySelector("[data-modal-text]");
-  //
-  // // modal toggle function
-  // const testimonialsModalFunc = function () {
-  //   if (modalContainer) {
-  //     modalContainer.classList.toggle("active");
-  //   }
-  //   if (overlay) {
-  //     overlay.classList.toggle("active");
-  //   }
-  // }
-  //
-  // // add click event to all modal items
-  // for (let i = 0; i < testimonialsItem.length; i++) {
-  //   testimonialsItem[i].addEventListener("click", function () {
-  //     if (modalImg) {
-  //       modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-  //       modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-  //     }
-  //     if (modalTitle) {
-  //       modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-  //     }
-  //     if (modalText) {
-  //       modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-  //     }
-  //     testimonialsModalFunc();
-  //   });
-  // }
-  //
-  // // add click event to modal close button
-  // if (modalCloseBtn) {
-  //   modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-  // }
-  // if (overlay) {
-  //   overlay.addEventListener("click", testimonialsModalFunc);
-  // }
-  //
+  // testimonials variables
+  const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+  const modalContainer = document.querySelector("[data-modal-container]");
+  const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+  const overlay = document.querySelector("[data-overlay]");
+
+  // modal variable
+  const modalImg = document.querySelector("[data-modal-img]");
+  const modalTitle = document.querySelector("[data-modal-title]");
+  const modalText = document.querySelector("[data-modal-text]");
+
+  // modal toggle function
+  const testimonialsModalFunc = function () {
+    if (modalContainer) {
+      modalContainer.classList.toggle("active");
+    }
+    if (overlay) {
+      overlay.classList.toggle("active");
+    }
+  }
+
+  // add click event to all modal items
+  for (let i = 0; i < testimonialsItem.length; i++) {
+    testimonialsItem[i].addEventListener("click", function () {
+      if (modalImg) {
+        modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+        modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+      }
+      if (modalTitle) {
+        modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+      }
+      if (modalText) {
+        modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+      }
+      testimonialsModalFunc();
+    });
+  }
+
+  // add click event to modal close button
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+  }
+  if (overlay) {
+    overlay.addEventListener("click", testimonialsModalFunc);
+  }
+
   // custom select variables
   const select = document.querySelector("[data-select]");
   const selectItems = document.querySelectorAll("[data-select-item]");
@@ -164,42 +164,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // portfolio modal variables
-  const projectLinks = document.querySelectorAll(".project-link");
-
-  // modal toggle function
-  const portfolioModalFunc = function () {
-    modalContainer.classList.toggle("active");
-    overlay.classList.toggle("active");
-  }
-
-  // add click event to all project links
-  for (let i = 0; i < projectLinks.length; i++) {
-    projectLinks[i].addEventListener("click", function (event) {
-      event.preventDefault();
-      const projectId = this.dataset.projectId;
-      const projectItem = this.parentElement;
-      const projectTitle = projectItem.querySelector(".project-title").innerHTML;
-      const projectCategory = projectItem.querySelector(".project-category").innerHTML;
-      const projectImgSrc = projectItem.querySelector(".project-img img").src;
-      const projectImgAlt = projectItem.querySelector(".project-img img").alt;
-
-      modalTitle.innerHTML = projectTitle;
-      modalText.innerHTML = `<p>${projectCategory}</p>`;
-      modalImg.src = projectImgSrc;
-      modalImg.alt = projectImgAlt;
-
-      portfolioModalFunc();
-    });
-  }
-
-  // add click event to modal close button
-  if (modalCloseBtn) {
-    modalCloseBtn.addEventListener("click", portfolioModalFunc);
-  }
-  if (overlay) {
-    overlay.addEventListener("click", portfolioModalFunc);
-  }
 
   // blog modal variables
   const blogPostLinks = document.querySelectorAll(".blog-post-link");
