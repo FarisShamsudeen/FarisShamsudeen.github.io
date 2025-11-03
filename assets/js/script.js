@@ -23,51 +23,44 @@ document.addEventListener("DOMContentLoaded", function() {
     sidebarBtn.addEventListener("click", function() { elementToggleFunc(sidebar); });
   }
 
-  // myoffers variables
-  const myoffersItem = document.querySelectorAll("[data-myoffers-item]");
-  const modalContainer = document.querySelector("[data-modal-container]");
-  const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-  const overlay = document.querySelector("[data-overlay]");
+  function initInfiniteScroll(selector, speed = 0.3) {
+    const list = document.querySelector(selector);
+    if (!list) return;
 
-  // modal variable
-  const modalImg = document.querySelector("[data-modal-img]");
-  const modalTitle = document.querySelector("[data-modal-title]");
-  const modalText = document.querySelector("[data-modal-text]");
+    // Get children (skip spinner etc.)
+    const items = Array.from(list.children);
 
-  // modal toggle function
-  const myoffersModalFunc = function() {
-    if (modalContainer) {
-      modalContainer.classList.toggle("active");
+    // Clone all items once for looping effect
+    items.forEach(item => list.appendChild(item.cloneNode(true)));
+
+    // Variables
+    let isHovered = false;
+    let position = 0;
+
+    list.addEventListener("mouseenter", () => (isHovered = true));
+    list.addEventListener("mouseleave", () => (isHovered = false));
+
+    // Smooth infinite scroll loop
+    function animate() {
+      if (!isHovered) {
+        position += speed;
+        // Scroll to the new position
+        list.scrollLeft = position;
+
+        // Reset position seamlessly when we reach half the scroll width
+        if (position >= list.scrollWidth / 2) position = 0;
+        if (position <= 0) position = list.scrollWidth / 2;
+      }
+
+      requestAnimationFrame(animate);
     }
-    if (overlay) {
-      overlay.classList.toggle("active");
-    }
+
+    requestAnimationFrame(animate);
   }
 
-  // add click event to all modal items
-  for (let i = 0; i < myoffersItem.length; i++) {
-    myoffersItem[i].addEventListener("click", function() {
-      if (modalImg) {
-        modalImg.src = this.querySelector("[data-myoffers-avatar]").src;
-        modalImg.alt = this.querySelector("[data-myoffers-avatar]").alt;
-      }
-      if (modalTitle) {
-        modalTitle.innerHTML = this.querySelector("[data-myoffers-title]").innerHTML;
-      }
-      if (modalText) {
-        modalText.innerHTML = this.querySelector("[data-myoffers-text]").innerHTML;
-      }
-      myoffersModalFunc();
-    });
-  }
+  initInfiniteScroll(".myoffers-list", -0.6); // scroll leftwards
+  initInfiniteScroll(".mytools-list", 0.9);   // scroll rightwards
 
-  // add click event to modal close button
-  if (modalCloseBtn) {
-    modalCloseBtn.addEventListener("click", myoffersModalFunc);
-  }
-  if (overlay) {
-    overlay.addEventListener("click", myoffersModalFunc);
-  }
 
   // custom select variables
   const select = document.querySelector("[data-select]");
